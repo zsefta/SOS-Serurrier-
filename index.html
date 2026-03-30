@@ -45,7 +45,7 @@
 
         .btn-nav-blue { text-decoration: none; font-weight: 700; padding: 8px 15px; border-radius: 8px; font-size: 0.9rem; background: var(--primary-blue); color: white; transition: 0.3s; }
 
-        /* HERO AVEC PHOTO SERRURIER ET FILTRE BLEU */
+        /* HERO */
         .hero { 
             position: relative; 
             height: 75vh; 
@@ -61,18 +61,33 @@
         .hero h1 { font-family: 'DM Sans'; font-size: clamp(2.2rem, 7vw, 4rem); font-weight: 800; margin-bottom: 20px; line-height: 1.1; }
         .btn-white { display: inline-block; padding: 18px 35px; border-radius: 12px; font-weight: 800; text-decoration: none; font-size: 1.4rem; background: white; color: var(--primary-blue); transition: 0.3s; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
 
+        /* STYLE DES LOGOS TEXTE (PLACEHOLDERS) */
+        .partners-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 15px; max-width: 1100px; margin: 0 auto 35px; align-items: center; }
+        .text-logo {
+            background: #f9f9f9;
+            border: 1px solid #eee;
+            padding: 15px 5px;
+            border-radius: 6px;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 900;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            color: #444;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+        .logo-fichet { border-bottom: 3px solid #000; color: #000; }
+        .logo-picard { color: #00427c; }
+        .logo-vachette { color: #e2001a; font-style: italic; }
+        .logo-abus { background: #e2001a; color: white; border: none; }
+        .logo-bricard { color: #0066FF; }
+
         /* CARROUSEL AVIS */
         .reviews-section { padding: 60px 0; background: var(--bg-soft); border-top: 1px solid #eee; border-bottom: 1px solid #eee; overflow: hidden; }
         .carousel-container { display: flex; width: calc(350px * 12); animation: scrollReviews 40s linear infinite; }
         .review-card { width: 320px; background: white; padding: 25px; border-radius: 15px; margin: 0 15px; border: 1px solid #eee; flex-shrink: 0; }
         .stars { color: #FFD700; margin-bottom: 10px; font-size: 1rem; }
         @keyframes scrollReviews { 0% { transform: translateX(0); } 100% { transform: translateX(calc(-350px * 6)); } }
-
-        /* PARTENAIRES */
-        .partners-section { padding: 60px 5%; background: #fff; text-align: center; border-bottom: 1px solid #eee; }
-        .partners-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 25px; max-width: 1100px; margin: 0 auto 35px; align-items: center;}
-        .partner-img { max-width: 100%; height: 45px; object-fit: contain; filter: grayscale(1); opacity: 0.6; transition: 0.3s;}
-        .partner-img:hover { filter: grayscale(0); opacity: 1; }
 
         .certifications { display: flex; justify-content: center; flex-wrap: wrap; gap: 30px; font-weight: 700; color: var(--primary-blue); font-size: 0.8rem; text-transform: uppercase; margin-bottom: 25px; }
         .cert-item { display: flex; align-items: center; gap: 10px; }
@@ -85,7 +100,6 @@
         .form-group input, .form-group select { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-family: inherit; }
         .btn-submit { width: 100%; background: var(--primary-blue); color: white; border: none; padding: 15px; border-radius: 8px; font-weight: 800; cursor: pointer; font-family: 'DM Sans'; font-size: 1.1rem; }
 
-        /* CONSENTEMENT COOKIES */
         #cookie-banner { position: fixed; bottom: 20px; left: 20px; right: 20px; background: white; border: 1px solid #eee; padding: 20px; border-radius: 15px; z-index: 9999; box-shadow: 0 10px 40px rgba(0,0,0,0.1); display: flex; flex-direction: column; gap: 15px; max-width: 450px; }
         .cookie-buttons { display: flex; gap: 10px; }
         .btn-cookie { flex: 1; padding: 10px; border-radius: 8px; border: none; font-weight: 700; cursor: pointer; font-size: 0.85rem; }
@@ -103,7 +117,7 @@
 <body>
 
     <div id="cookie-banner">
-        <p style="font-size: 0.85rem; color: #444;"><strong>Gestion des cookies</strong><br>Nous utilisons des cookies pour optimiser votre expérience et mesurer l'efficacité de nos interventions d'urgence dans le Var.</p>
+        <p style="font-size: 0.85rem; color: #444;"><strong>Gestion des cookies</strong><br>Nous utilisons des cookies pour optimiser votre expérience dans le Var.</p>
         <div class="cookie-buttons">
             <button class="btn-cookie btn-refuse" onclick="hideCookie()">Refuser</button>
             <button class="btn-cookie btn-accept" onclick="hideCookie()">Accepter</button>
@@ -139,16 +153,16 @@
     <section class="partners-section">
         <p style="font-size: 0.7rem; font-weight: 800; color: #bbb; margin-bottom: 35px; letter-spacing: 1px;">NOS PARTENAIRES TECHNIQUES</p>
         <div class="partners-grid">
-            <img src="image_9.png" alt="Fichet" class="partner-img" />
-            <img src="image_1.png" alt="Picard" class="partner-img" />
-            <img src="image_2.png" alt="Reelax" class="partner-img" />
-            <img src="image_3.png" alt="Vachette" class="partner-img" />
-            <img src="image_4.png" alt="Pollux" class="partner-img" />
-            <img src="image_5.png" alt="JPM" class="partner-img" />
-            <img src="image_6.png" alt="Bricard" class="partner-img" />
-            <img src="image_7.png" alt="Abus" class="partner-img" />
-            <img src="image_8.png" alt="Keso" class="partner-img" />
-            <img src="image_0.png" alt="City" class="partner-img" />
+            <div class="text-logo logo-fichet">Fichet</div>
+            <div class="text-logo logo-picard">Picard</div>
+            <div class="text-logo logo-vachette">Vachette</div>
+            <div class="text-logo logo-abus">ABUS</div>
+            <div class="text-logo logo-bricard">Bricard</div>
+            <div class="text-logo">Pollux</div>
+            <div class="text-logo">JPM</div>
+            <div class="text-logo">Mottura</div>
+            <div class="text-logo">Keso</div>
+            <div class="text-logo">City</div>
         </div>
         <div class="certifications">
             <div class="cert-item"><div class="green-dot"></div> Pièces d'origine garanties</div>
@@ -165,8 +179,7 @@
             <div class="review-card"><div class="stars">★★★★★</div><p>"Porte claquée ouverte sans dommage. Devis respecté."</p><b>- Sarah M.</b></div>
             <div class="review-card"><div class="stars">★★★★★</div><p>"Intervention en pleine nuit à Hyères. Très professionnel."</p><b>- Marc L.</b></div>
             <div class="review-card"><div class="stars">★★★★★</div><p>"Remplacement de cylindre rapide. Facture claire."</p><b>- Sophie K.</b></div>
-            <div class="review-card"><div class="stars">★★★★★</div><p>"Serrurier intervenu en 30 minutes à Toulon. Honnête et efficace."</p><b>- Jean P.</b></div>
-            <div class="review-card"><div class="stars">★★★★★</div><p>"Porte claquée ouverte sans dommage. Devis respecté."</p><b>- Sarah M.</b></div>
+            <div class="review-card"><div class="stars">★★★★★</div><p>"Très rapide à Draguignan. Je recommande !"</p><b>- Paul V.</b></div>
         </div>
         <a href="tel:0753673866" class="section-phone animated-phone">07 53 67 38 66</a>
     </section>
@@ -192,7 +205,7 @@
 
         <div class="map-container">
             <div class="map-status"><div class="dot-pulse"></div> 6 techniciens disponibles (Var)</div>
-            <iframe width="100%" height="100%" frameborder="0" src="http://googleusercontent.com/maps.google.com/83" allowfullscreen></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d185850.53641772646!2d6.108422204652417!3d43.300000000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12c91b1064299c89%3A0x30819a5c20c0000!2sVar!5e0!3m2!1sfr!2sfr!4v1711800000000!5m2!1sfr!2sfr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </section>
 
